@@ -1,0 +1,18 @@
+﻿@page "/test"
+
+@using CanvelBlazor.Components.Shared
+
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+<h3>Home Page</h3>
+
+<MyButton ButtonText="Contactanos" OnClick="@NavigateToContact" />
+
+@code {
+    private void NavigateToContact()
+    {
+        // This will navigate to the /contact route
+        NavigationManager.NavigateTo("/contact");
+    }
+}
